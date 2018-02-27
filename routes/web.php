@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//database
+Route::get('/database/notification','NotificationsController@DatabaseNotification');
+
+//mail
+Route::get('/mail/notification','NotificationsController@MailNotification');
+
+//sms
+Route::get('/sms/notification','NotificationsController@SmsNotification');
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
